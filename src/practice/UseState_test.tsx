@@ -11,10 +11,12 @@ const Usestate_test = () => {
     const [member, setMember] = useState<Member | null>();
     
     useEffect(() => {
+        // member set 하는 방법
         setMember({name: "admin", nickname : "관리자"});
     }, [])
 
     useEffect(() => {
+        // ? 물음표를 붙이면 null, undefined 변수 타입에 대응 가능
         console.log(member?.name);
     }, [member])
 
